@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --font-primary : "Poppins", sans-serif;
+  --weight-light : 200;
+  --weight-regular : 400;
+  --weight-semibold : 600;
+
+  font-size: 15px;
+  background-color: rgb(241, 241, 236);
+  padding: clamp(3rem, 5vw + 1rem, 5rem)
+}
+
+.flex-box-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.subtitle{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-light);
+}
+
+.secondSubtitle{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-semibold);
+}
+
+.thirdSubtitle{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-regular);
+}
+
+
+.box{
+  background-color: white;
+  border-radius: 5px;
+  width:fit-content;
+  padding: clamp(0.5rem, calc(5vh + 1rem), 1.5rem);
+  box-shadow: 1px 1px 10px rgb(88, 87, 87);
+}
+
+.img-box{
+  display: flex;
+  justify-content: end;
+  padding: clamp(0.25rem, calc(5vh + 1rem), 1rem);
+}
+
+.title{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-semibold);
+}
+
+.card-subtitle{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-regular);
+}
