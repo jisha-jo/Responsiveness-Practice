@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --font-primary : "Poppins", sans-serif;
+  --weight-light : 200;
+  --weight-regular : 400;
+  --weight-semibold : 600;
+
+  --colour-red : hsl(0, 78%, 62%);
+  --colour-cyan : hsl(180, 62%, 55%);
+  --colour-yellow : hsl(34, 97%, 64%);
+  --colour-blue : hsl(212, 86%, 64%);
+
+  --fs-400 : 0.9rem;
+  --fs-500 : 1.1rem;
+  --fs-600 : 1.3rem;
+  --fs-900 : 2rem;
+
+  background-color: rgb(252, 252, 249);
+  padding: clamp(1rem, 5vw + 1rem, 4rem);
+}
+
+/* this ensures that the width and height includes all the margin, padding everything */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+
+.flex-box-col{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.flex-box{
+  display:flex;
+  gap : 1rem;
+  flex : 1;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+/* all children under parent layout-flex gets flex:1 applied to it */
+.layout-flex > *{
+  flex:1
+}
+
+.col{
+  display:flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heading{
+  line-height: 2rem;
+  padding-bottom: 3rem;
+  margin-inline: clamp(2rem, calc(10vw + 1rem), 12rem);
+  text-align: center;
+}
+
+.subtitle{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-light);
+  font-size: var(--fs-900);
+}
+
+.secondSubtitle{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-semibold);
+  font-size: var(--fs-900);
+}
+
+.thirdSubtitle{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-regular);
+  font-size: var(--fs-400);
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+
+.box{
+  background-color: white;
+  border-radius: 5px;
+  width:100%;
+  min-height: 15rem;
+  padding: clamp(0.5rem, calc(5vh + 1rem), 1.5rem);
+  box-shadow: 1px 1px 10px rgb(88, 87, 87);
+}
+
+.card1{
+  border-top: solid var(--colour-yellow) 3px;
+}
+
+.card2{
+  border-top: solid var(--colour-blue) 3px;
+}
+
+.card3{
+  border-top: solid var(--colour-red) 3px;
+}
+
+.card4{
+  border-top: solid var(--colour-cyan) 3px;
+}
+
+.img-box{
+  display: flex;
+  justify-content: end;
+  padding: clamp(0.25rem, calc(5vh + 1rem), 1rem);
+}
+
+.title{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-semibold);
+  font-size: var(--fs-600);
+}
+
+.card-subtitle{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-regular);
+  font-size: var(--fs-400);
+}
+
+.attribution{
+  font-family: var(--font-primary);
+  font-weight: var(--weight-light);
+  font-size: var(--fs-400);
+  line-height: 1.5rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+@media(max-width:780px){
+  .layout-flex{
+    display: flex;
+    flex-direction: column;
+  }
+
+  :root {
+    --fs-400: 0.8rem;
+    --fs-500: 1rem;
+    --fs-600: 1.15rem;
+    --fs-900: 1.5rem;
+  }
+
+  .heading{
+    margin: 0px;
+  }
+}
