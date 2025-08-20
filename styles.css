@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 :root{
   --font-primary : "Figtree", sans-serif;
   --weight-light : 200;
@@ -9,7 +10,7 @@
   --fs-400 : 0.9rem;
   --fs-500 : 1.1rem;
   --fs-600 : 1.3rem;
-  --fs-900 : 2rem;
+  --fs-900 : 2.5rem;
   
   padding-top: 2rem;
 
@@ -23,14 +24,20 @@
 
 .heading{
   font-family: var(--font-primary);
-  font-size: var(--fs-500);
-  padding-inline : 15rem;
+  padding-inline : 20rem;
+}
+
+.title{
+  font-size: var(--fs-900);
+  font-weight: var(--weight-semibold);
+  text-align: center;
+  margin-block: 2rem;
 }
 
 .bodyContainer{
   font-family: var(--font-primary);
   font-size: var(--fs-500);
-  padding-inline : 15rem;
+  padding-inline : 5rem;
 }
 
 .subHeading{
@@ -51,7 +58,9 @@
 .contactIcons{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap : 2rem;
+  padding-top: 1rem;
 }
 
 .breakpoint{
@@ -75,11 +84,14 @@
 
 .layout-flex{
   display: flex;
-  gap:2rem
+  flex-wrap : wrap;
+  gap:2rem;
+  justify-content: center;
 }
 
 .col{
-  flex:1;
+  flex:1 1 300px;
+  max-width : 300px
 }
 
 .iconImg{
@@ -90,4 +102,24 @@
   width: 100%;
   height:auto;
   border-radius:10px
+}
+
+@media(max-width:780px){
+  :root {
+    --fs-400: 0.8rem;
+    --fs-500: 1rem;
+    --fs-600: 1.15rem;
+    --fs-900: 1.5rem;
+  }
+
+  .heading{
+    padding-inline: 1rem;
+  }
+
+  .bodyContainer{
+    padding-inline : 1rem;
+  }
+  .contactIcons{
+    gap: 0.5rem
+  }
 }
