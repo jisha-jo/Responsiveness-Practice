@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+:root{
+
+  --primary-font: 'DM Sans', sans-serif;
+
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+  
+  padding-inline: clamp(2rem, 5vw + 2rem, 5rem);
+  padding-block: clamp(0.5rem, 5vw + 0.5rem, 3rem);
+  font-family: var(--primary-font);
+
+}
+
+*,
+* ::before,
+* ::after{
+  box-sizing: border-box;
+}
+
+.box{
+  border-radius : 1rem;
+  padding: 1rem;
+  background-color: var(--purple-500);
+  width: fit-content;
+}
