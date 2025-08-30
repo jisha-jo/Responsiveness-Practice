@@ -53,6 +53,7 @@ p{
     "eight two three four"
     "eight six five five"
 }
+}
 
 .box{
   border-radius : 1rem;
@@ -96,6 +97,10 @@ p{
   }
 
   grid-area: two;
+
+  @media (width > 960px){
+    --card-image-width: 120%;
+  }
 }
 
 .box:nth-child(3){
@@ -107,6 +112,11 @@ p{
 
   img{
     margin-bottom: -50px;
+
+    @media (width > 960px){
+      margin-bottom: -120px;
+      
+    }
   }
 
   grid-area: three;
@@ -122,18 +132,30 @@ p{
   --card-image-width: 75%;
 
   grid-area: four;
+
+  @media (width > 960px){
+    justify-items: start;
+    --card-image-width: 120%;
+  }
 }
 
 .box:nth-child(5){
   background-color: var(--purple-500);
   color: white;
-  font-size: 1.5rem;
   display:grid;
   justify-items: center;
-  text-align: center;
   --card-image-width: 60%;
 
   grid-area: five;
+
+   @media (width > 960px){
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    justify-content: start;
+    align-items: center;
+    --card-image-width: 80%;
+    
+  }
 }
 
 .box:nth-child(6){
@@ -157,6 +179,11 @@ p{
   }
 
   grid-area: seven;
+
+  @media (width > 960px){
+    display: grid;
+    align-content: center;
+  }
 }
 
 img{
@@ -170,4 +197,9 @@ img{
   --card-image-width: 80%;
 
   grid-area: eight;
+
+  @media (width > 960px){
+    --card-image-width: 85%;
+    
+  }
 }
