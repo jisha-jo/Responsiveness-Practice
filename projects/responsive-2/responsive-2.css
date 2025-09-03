@@ -128,6 +128,9 @@ p{
   background-color: var(--purple-100);
   color: black;
   display:grid;
+  justify-content: center;
+  justify-items : center;
+  text-align: center;
   --card-image-width: 75%;
   grid-area: four;
 
@@ -138,6 +141,7 @@ p{
 
   @media (width > 960px){
     justify-items: start;
+    text-align: left;
     --card-image-width: 120%;
   }
 }
@@ -147,6 +151,7 @@ p{
   color: white;
   display:grid;
   justify-items: center;
+  text-align: center;
   --card-image-width: 60%;
   font-weight: 500;
   font-size: clamp(1.5rem, 1rem + 1.5vw, 3rem);
