@@ -29,7 +29,7 @@ h1, p{
 }
 
 p{
-  font-size: inherit;
+  /* font-size: inherit; */
 }
 
 .container{
@@ -57,7 +57,7 @@ p{
 
 .box{
   border-radius : 1rem;
-  padding: 1rem;
+  padding: clamp(1rem, 1rem + 1vw, 2rem);
   background-color: var(--purple-500);
   overflow: hidden;
   line-height: 1;
@@ -77,6 +77,8 @@ p{
   justify-items: center; 
   text-align: center; 
   --card-image-width: 70%;
+  font-size: clamp(1.5rem, 1rem + 0.5vw, 3rem);
+  font-weight: 700;
   span{
     color: var(--yellow-500);
   }
@@ -88,7 +90,7 @@ p{
 .box:nth-child(2){
   background-color: var(--yellow-100);
   color: black;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
   font-weight: 500;
   --card-image-width: 100%;
 
@@ -106,7 +108,7 @@ p{
 .box:nth-child(3){
   background-color: var(--yellow-500);
   color: black;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
   font-weight: 500;
   --card-image-width: 75%;
 
@@ -125,13 +127,14 @@ p{
 .box:nth-child(4){
   background-color: var(--purple-100);
   color: black;
-
   display:grid;
-  justify-items: center;
-  text-align: center;
   --card-image-width: 75%;
-
   grid-area: four;
+
+  h1{
+    font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
+    font-weight: 500;
+  }
 
   @media (width > 960px){
     justify-items: start;
@@ -145,6 +148,9 @@ p{
   display:grid;
   justify-items: center;
   --card-image-width: 60%;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 3rem);
+
 
   grid-area: five;
 
@@ -161,17 +167,20 @@ p{
 .box:nth-child(6){
   background-color: var(--yellow-100);
   color: black;
-  font-size: 1.5rem;
   --card-image-width: 60%;
-
+  font-size: 500;
+  
   grid-area: six;
+  span{
+    font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
+  }
 }
 
 .box:nth-child(7){
   background-color: var(--yellow-100);
   color: black;
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
   --card-image-width: 60%;
   span{
     font-style: italic;
@@ -193,7 +202,9 @@ img{
 .box:nth-child(8){
   background-color: var(--yellow-500);
   color: black;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
+  font-weight: 500;
+
   --card-image-width: 80%;
 
   grid-area: eight;
