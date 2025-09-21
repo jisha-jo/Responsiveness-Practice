@@ -7,10 +7,10 @@
   --weight-regular : 400;
   --weight-semibold : 600;
 
-  --fs-400 : 0.9rem;
-  --fs-500 : 1.1rem;
-  --fs-600 : 1.3rem;
-  --fs-900 : 2.5rem;
+  --fs-400 : clamp(0.8rem, 0.5rem + 0.6vw, 1.2rem);
+  --fs-500 : clamp(0.9rem, 0.7rem + 0.6vw, 1.6rem);
+  --fs-600 : clamp(1.1rem, 0.9rem + 0.9vw, 2.5rem);
+  --fs-900 : clamp(2rem, 2rem + 0.5vw, 3.5rem);
   
   padding-top: 2rem;
 
@@ -24,24 +24,28 @@
 
 .heading{
   font-family: var(--font-primary);
-  padding-inline : 20rem;
+  padding-inline : clamp(1rem, 1rem + 1vw, 5rem);
 }
 
-.title{
+.title{ 
   font-size: var(--fs-900);
   font-weight: var(--weight-semibold);
   text-align: center;
-  margin-block: 2rem;
+  margin-block: clamp(0.5rem, 0.5rem + 0.5vw, 2rem);
 }
 
 .bodyContainer{
   font-family: var(--font-primary);
   font-size: var(--fs-500);
-  padding-inline : 5rem;
+  padding-inline : clamp(1rem, 1rem + 1vw, 10rem);
+  padding-top: clamp(0.5rem, 0.5rem + 0.5vw, 3rem);
 }
 
 .subHeading{
   color: gray;
+  padding-inline: clamp(1rem, 1rem + 10vw, 30rem);
+  font-size: var(--fs-400);
+  text-align: center;
 }
 
 .iconCard{
@@ -53,6 +57,14 @@
   width : fit-content;
   padding : 0.5rem;
   cursor: pointer;
+
+  a{
+    text-decoration: none;
+    color: inherit;
+    display:flex;
+    align-items: center;
+    font-size: var(--fs-400);
+  }
 }
 
 .contactIcons{
@@ -60,7 +72,7 @@
   align-items: center;
   justify-content: center;
   gap : 2rem;
-  padding-top: 1rem;
+  padding-top: clamp(0.5rem, 0.5rem + 0.5vw, 1rem);
 }
 
 .breakpoint{
@@ -80,6 +92,7 @@
 
 .content{
   padding:1rem;
+  font-size: var(--fs-400);
 }
 
 .layout-flex{
@@ -98,26 +111,21 @@
   padding-right:0.5rem;
 }
 
+.iconCard:hover{
+  box-shadow: 0px 5px 15px rgb(192, 190, 190);
+}
+
 .image{
   width: 100%;
   height:auto;
+  aspect-ratio: 16/9;
   border-radius:10px
 }
 
 @media(max-width:780px){
-  :root {
-    --fs-400: 0.8rem;
-    --fs-500: 1rem;
-    --fs-600: 1.15rem;
-    --fs-900: 1.5rem;
-  }
 
   .heading{
     padding-inline: 1rem;
-  }
-
-  .bodyContainer{
-    padding-inline : 1rem;
   }
   .contactIcons{
     gap: 0.5rem
