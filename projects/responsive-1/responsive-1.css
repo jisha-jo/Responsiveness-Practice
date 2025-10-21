@@ -91,7 +91,6 @@
   background-color: white;
   border-radius: 5px;
   width:100%;
-  min-height: 15rem;
   padding: clamp(0.5rem, calc(5vh + 1rem), 1.5rem);
   box-shadow: 1px 1px 10px rgb(88, 87, 87);
 }
@@ -146,13 +145,23 @@
   }
 
   :root {
-    --fs-400: 0.8rem;
-    --fs-500: 1rem;
-    --fs-600: 1.15rem;
-    --fs-900: 1.5rem;
+    --fs-400: 0.7rem;
+    --fs-500: 0.8rem;
+    --fs-600: 1rem;
+    --fs-900: 1.2rem;
   }
 
   .heading{
     margin: 0px;
   }
+
+  .flex-box-col{
+  gap: 0rem;
+}
+
+img{
+  width : 32px;
+  height: 32px;
+}
+
 }
